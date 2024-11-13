@@ -1,9 +1,12 @@
 import React from 'react';
+import HeroSection from '../components/HeroSection';
+import ServicesSection from '../components/ServicesSection';
+
 
 const HomePage = () => (
     <div>
-        <h1>Welcome to Viralify</h1>
-        {/* Тут будут секции, такие как Hero, Services и другие */}
+        <HeroSection />
+        <ServicesSection />
     </div>
 );
 
