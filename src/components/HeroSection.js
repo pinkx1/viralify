@@ -13,7 +13,6 @@ const HeroWrapper = styled.section`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 50px;
     gap: 50px;
     width: 100%;
     max-width: 1200px;
@@ -24,10 +23,8 @@ const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
     gap: 35px;
     width: 531px;
-    height: 481px;
 `;
 
 const Title = styled.h1`
@@ -38,7 +35,6 @@ const Title = styled.h1`
     color: #000000;
     margin: 0;
     width: 531px;
-    height: 231px;
 `;
 
 const Subtitle = styled.p`
@@ -49,7 +45,6 @@ const Subtitle = styled.p`
     color: #000000;
     margin: 0;
     width: 498px;
-    height: 112px;
 `;
 
 const Button = styled.a`
@@ -90,7 +85,6 @@ const LogotypesContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
     margin: 50px auto 70px auto;
     gap: 20px;
     max-width: 1200px;
@@ -107,8 +101,6 @@ const LogotypesContainer = styled.div`
     }
 `;
 
-
-
 const HeroSection = () => (
     <>
         <HeroWrapper>
@@ -120,7 +112,7 @@ const HeroSection = () => (
                 <Button href="#contact">Book a consultation</Button>
             </TextContainer>
             <ImageContainer>
-                <img src={illustration} alt="Digital Marketing Illustration"/>
+                <img src={illustration} alt="Digital Marketing Illustration" />
             </ImageContainer>
         </HeroWrapper>
 

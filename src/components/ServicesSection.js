@@ -1,22 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import iconArrow from '../assets/images/arrow-icon.png';
+import iconArrowBlack from '../assets/images/arrow-icon-black.png';
+import iconArrowWhite from '../assets/images/arrow-icon-white.png';
 import seoImage from '../assets/images/seo.png';
 import ppcImage from '../assets/images/ppc.png';
 import socialMediaImage from '../assets/images/social-media.png';
 import emailImage from '../assets/images/email.png';
 import contentImage from '../assets/images/content.png';
 import analyticsImage from '../assets/images/analytics.png';
+import SectionHeader from './SectionHeader';
+
 
 const CardWrapper = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    gap: 20px;
     width: 100%;
-    height: 260px; /* Фиксированная высота для одинакового размера */
+    height: 260px;
     background-color: ${({ bgColor }) => bgColor || '#F3F3F3'};
     border: 1px solid #191A23;
     box-shadow: 0px 5px 0px #191A23;
@@ -24,104 +24,135 @@ const CardWrapper = styled.div`
     box-sizing: border-box;
 `;
 
+const CardContentContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+`;
+
 const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 `;
 
-const Label = styled.div`
-    background-color: #b9ff66;
+const LabelContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+`;
+
+const LabelLine = styled.div`
+    background-color: ${({ bgColor }) =>
+            bgColor === '#F3F3F3' ? '#b9ff66' : '#FFFFFF'};
     padding: 5px 10px;
     border-radius: 7px;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 20px;
     font-weight: 500;
     color: #000;
-    max-width: 200px;
 `;
 
 const LearnMore = styled.a`
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #000;
+    color: ${({ bgColor }) =>
+            bgColor === '#191A23' ? '#FFFFFF' : '#000000'};
     font-family: 'Space Grotesk', sans-serif;
     font-size: 18px;
     text-decoration: none;
 `;
 
 const IconWrapper = styled.img`
-    width: 20px;
-    height: 20px;
+    width: 41px;
+    height: 41px;
 `;
 
 const ImageWrapper = styled.img`
-  width: 200px;
-  height: auto;
+    width: 200px;
+    height: auto;
 `;
 
-const ServiceCard = ({ label, description, bgColor, image }) => (
-    <CardWrapper bgColor={bgColor}>
-        <ContentWrapper>
-            <Label>{label}</Label>
-            <LearnMore href="#">
-                <IconWrapper src={iconArrow} alt="Arrow icon" />
-                Learn more
-            </LearnMore>
-        </ContentWrapper>
-        <ImageWrapper src={image} alt={`${label} illustration`} />
-    </CardWrapper>
-);
+const ServiceCard = ({ labelLines, bgColor, image }) => {
+    const icon = bgColor === '#191A23' ? iconArrowWhite : iconArrowBlack;
+
+    return (
+        <CardWrapper bgColor={bgColor}>
+            <CardContentContainer>
+                <ContentWrapper>
+                    <LabelContainer>
+                        {labelLines.map((line, index) => (
+                            <LabelLine key={index} bgColor={bgColor}>
+                                {line}
+                            </LabelLine>
+                        ))}
+                    </LabelContainer>
+                    <LearnMore href="#" bgColor={bgColor}>
+                        <IconWrapper src={icon} alt="Arrow icon" />
+                        Learn more
+                    </LearnMore>
+                </ContentWrapper>
+                <ImageWrapper src={image} alt={`${labelLines.join(' ')} illustration`} />
+            </CardContentContainer>
+        </CardWrapper>
+    );
+};
 
 const CardGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px; /* Отступ между карточками */
-    max-width: 1100px; /* Ограничиваем ширину сетки для соблюдения общего стиля */
-    margin: 0 auto; /* Центрируем сетку */
+    gap: 40px;
 
     @media (max-width: 768px) {
-        grid-template-columns: 1fr; /* На маленьких экранах одна карточка в ряд */
-        padding: 0 20px; /* Отступы слева и справа */
+        grid-template-columns: 1fr;
     }
 `;
 
-
-
 const ServicesSection = () => (
-    <CardGrid>
-        <ServiceCard
-            label="Search engine optimization"
-            bgColor="#F3F3F3"
-            image={seoImage}
+    <>
+        <SectionHeader
+            title="Services"
+            description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
         />
-        <ServiceCard
-            label="Pay-per-click advertising"
-            bgColor="#B9FF66"
-            image={ppcImage}
-        />
-        <ServiceCard
-            label="Social Media Marketing"
-            bgColor="#191A23"
-            image={socialMediaImage}
-        />
-        <ServiceCard
-            label="Email Marketing"
-            bgColor="#F3F3F3"
-            image={emailImage}
-        />
-        <ServiceCard
-            label="Content Creation"
-            bgColor="#B9FF66"
-            image={contentImage}
-        />
-        <ServiceCard
-            label="Analytics and Tracking"
-            bgColor="#191A23"
-            image={analyticsImage}
-        />
-    </CardGrid>
+        <CardGrid>
+            <ServiceCard
+                labelLines={["Search engine", "optimization"]}
+                bgColor="#F3F3F3"
+                image={seoImage}
+            />
+            <ServiceCard
+                labelLines={["Pay-per-click", "advertising"]}
+                bgColor="#B9FF66"
+                image={ppcImage}
+            />
+            <ServiceCard
+                labelLines={["Social Media", "Marketing"]}
+                bgColor="#191A23"
+                image={socialMediaImage}
+            />
+            <ServiceCard
+                labelLines={["Email", "Marketing"]}
+                bgColor="#F3F3F3"
+                image={emailImage}
+            />
+            <ServiceCard
+                labelLines={["Content", "Creation"]}
+                bgColor="#B9FF66"
+                image={contentImage}
+            />
+            <ServiceCard
+                labelLines={["Analytics and", "Tracking"]}
+                bgColor="#191A23"
+                image={analyticsImage}
+            />
+        </CardGrid>
+    </>
 );
 
 export default ServicesSection;

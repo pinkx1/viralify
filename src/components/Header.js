@@ -15,10 +15,7 @@ const HeaderContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
-    gap: 20px;
     width: 100%;
-    max-width: 1200px;
     height: 68px;
 `;
 
@@ -72,32 +69,32 @@ const NavLink = styled(Link)`
 `;
 
 const QuoteButton = styled(Link)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 16px;
-  width: 160px;
-  height: 48px;
-  border: 1px solid #191A23;
-  border-radius: 14px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  text-decoration: none;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    width: 160px;
+    height: 48px;
+    border: 1px solid #191A23;
+    border-radius: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
 
-  &:hover {
-    background-color: #191A23;
-    color: #ffffff;
-  }
+    &:hover {
+        background-color: #191A23;
+        color: #ffffff;
+    }
 
-  @media (max-width: 768px) {
-    width: 130px;
-    padding: 6px 12px;
-    font-size: 12px;
-  }
+    @media (max-width: 768px) {
+        width: 130px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 `;
 
 const Header = () => (
