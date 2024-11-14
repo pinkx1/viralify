@@ -8,12 +8,11 @@ import Container from './components/Container';
 const App = () => (
     <Router>
         <Container>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        {/* Добавим другие страницы позже */}
-      </Routes>
-      <Footer />
+          <Header />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+              </Routes>
+          <Footer />
         </Container>
     </Router>
 );

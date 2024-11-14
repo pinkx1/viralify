@@ -8,7 +8,6 @@ import socialMediaImage from '../assets/images/social-media.png';
 import emailImage from '../assets/images/email.png';
 import contentImage from '../assets/images/content.png';
 import analyticsImage from '../assets/images/analytics.png';
-import SectionHeader from './SectionHeader';
 
 
 const CardWrapper = styled.div`
@@ -116,10 +115,7 @@ const CardGrid = styled.div`
 
 const ServicesSection = () => (
     <>
-        <SectionHeader
-            title="Services"
-            description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
-        />
+
         <CardGrid>
             <ServiceCard
                 labelLines={["Search engine", "optimization"]}
