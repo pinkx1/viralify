@@ -1,0 +1,67 @@
+.accordion-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+  }
+  
+  .accordion-card {
+	background-color: #f3f3f3;
+	border: 1px solid #191a23;
+	box-shadow: 0px 5px 0px #191a23;
+	border-radius: 45px;
+	padding: 41px 60px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .accordion-card.open {
+	background-color: #b9ff66;
+  }
+  
+  .card-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .card-number {
+	width: 65px;
+	height: 77px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	font-size: 60px;
+	line-height: 77px;
+	color: #000000;
+  }
+  
+  .card-title {
+	width: 612px;
+	height: 38px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 38px;
+	color: #000000;
+	margin-left: 25px;
+  }
+  
+  .icon-wrapper {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	background-color: transparent;
+  }
+  
+  .divider {
+	height: 1px;
+	background-color: #000;
+	margin: 30px 0;
+  }
+  
+  .card-content {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 16px;
+	color: #000;
+  }
+  

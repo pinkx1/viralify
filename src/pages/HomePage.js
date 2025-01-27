@@ -8,6 +8,7 @@ import Accordion from "../components/AccordionCard"
 import TeamSectionComponent from "../components/TeamSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import ContactForm from "../components/ContactForm";
+import Spacer from '../components/Spacer';
 
 
 const HomePage = () => (
@@ -43,7 +44,8 @@ const HomePage = () => (
             title="Contact Us"
             description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
         />
-        <ContactForm />;
+        <ContactForm />
+        <Spacer height="140px" />
     </div>
 );
 
