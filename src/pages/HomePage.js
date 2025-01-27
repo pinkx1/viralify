@@ -6,6 +6,9 @@ import CaseStudies from '../components/CaseStudies'
 import SectionHeader from "../components/SectionHeader";
 import Accordion from "../components/AccordionCard"
 import TeamSectionComponent from "../components/TeamSection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import ContactForm from "../components/ContactForm";
+
 
 const HomePage = () => (
     <div>
@@ -35,6 +38,12 @@ const HomePage = () => (
                 title="Testimonials"
                 description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
             />
+        <TestimonialsSection />
+        <SectionHeader
+            title="Contact Us"
+            description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
+        />
+        <ContactForm />;
     </div>
 );
 
