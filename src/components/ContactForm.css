@@ -8,42 +8,42 @@
 	border-radius: 45px;
 	margin: 0 auto;
 	position: relative;
-  }
-  
-  .form {
+}
+
+.form {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 40px;
 	width: 556px;
-	height: 633px;
-  }
-  
-  .radio-group {
+	height: auto;
+}
+
+.radio-group {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
 	gap: 35px;
 	width: 276px;
-	height: 28px;
-  }
-  
-  .radio-option {
+	height: auto;
+}
+
+.radio-option {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	position: relative;
 	cursor: pointer;
-  }
-  
-  .radio-option input {
+}
+
+.radio-option input {
 	position: absolute;
 	opacity: 0;
 	width: 0;
 	height: 0;
-  }
-  
-  .radio-option div {
+}
+
+.radio-option div {
 	position: relative;
 	width: 28px;
 	height: 28px;
@@ -53,47 +53,47 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
-  
-  .radio-option div::after {
+}
+
+.radio-option div::after {
 	content: "";
 	width: 16px;
 	height: 16px;
 	background: transparent;
 	border-radius: 50%;
-  }
-  
-  .radio-option.checked div::after {
+}
+
+.radio-option.checked div::after {
 	background: #b9ff66;
-  }
-  
-  .radio-option span {
+}
+
+.radio-option span {
 	margin-left: 10px;
 	font-family: "Space Grotesk", sans-serif;
 	font-size: 18px;
 	line-height: 23px;
 	color: #000000;
-  }
-  
-  .field {
+}
+
+.field {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 5px;
 	width: 556px;
-  }
-  
-  .label {
+}
+
+.label {
 	font-family: "Space Grotesk", sans-serif;
 	font-size: 16px;
 	line-height: 28px;
 	color: #000000;
-  }
-  
-  .input,
-  .textarea {
+}
+
+.input,
+.textarea {
 	box-sizing: border-box;
-	width: 556px;
+	width: 100%;
 	background: #ffffff;
 	border: 1px solid #000000;
 	border-radius: 14px;
@@ -102,22 +102,22 @@
 	line-height: 23px;
 	color: #898989;
 	padding: 18px 30px;
-  }
-  
-  .input::placeholder,
-  .textarea::placeholder {
+}
+
+.input::placeholder,
+.textarea::placeholder {
 	color: #898989;
-  }
-  
-  .input {
+}
+
+.input {
 	height: 59px;
-  }
-  
-  .textarea {
+}
+
+.textarea {
 	height: 190px;
-  }
-  
-  .send-message-button {
+}
+
+.send-message-button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -134,22 +134,121 @@
 	padding: 0;
 	margin: 0;
 	transition: background 0.3s;
-  }
-  
-  .send-message-button:hover {
+}
+
+.send-message-button:hover {
 	background: #333333;
-  }
-  
-  .image-wrapper {
+}
+
+.image-wrapper {
 	position: absolute;
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
 	max-width: 400px;
-  }
-  
-  .image-wrapper img {
+}
+
+.image-wrapper img {
 	width: 100%;
 	height: auto;
-  }
-  
+}
+
+/* Адаптивность */
+@media (max-width: 1440px) {
+	.form-container {
+		padding: 40px 80px;
+	}
+	.form {
+		gap: 30px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.form-container {
+		flex-direction: column;
+		align-items: center;
+		padding: 30px 40px;
+	}
+
+	.form {
+		width: 90%;
+		max-width: 450px;
+		padding: 20px 30px;
+	}
+
+	.radio-group {
+		flex-direction: column;
+		width: 100%;
+		gap: 10px;
+	}
+
+	.radio-option {
+		width: 100%;
+	}
+
+	.field {
+		width: 100%;
+	}
+
+	.input,
+	.textarea {
+		font-size: 16px;
+		height: 45px;
+	}
+
+	.textarea {
+		height: 120px;
+	}
+
+	.send-message-button {
+		width: 100%;
+		min-height: 50px;
+	}
+
+	.image-wrapper {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.form-container {
+		padding: 16px;
+	}
+
+	.form {
+		width: 100%;
+		padding: 16px 20px;
+	}
+
+	.radio-group {
+		width: 100%;
+	}
+
+	.radio-option {
+		width: 100%;
+	}
+
+	.field {
+		width: 100%;
+	}
+
+	.input,
+	.textarea {
+		font-size: 14px;
+		height: 40px;
+		padding: 12px 20px;
+	}
+
+	.textarea {
+		height: 100px;
+	}
+
+	.send-message-button {
+		width: 100%;
+		min-height: 45px;
+	}
+
+	.image-wrapper {
+		display: none;
+	}
+}

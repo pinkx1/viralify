@@ -10,8 +10,8 @@ import zoomLogo from "../assets/images/zoom-logo.png";
 
 const HeroSection = () => (
   <>
-    <section className="hero-wrapper">
-      <div className="text-container">
+    <section className="hero-section">
+      <div className="hero-text-container">
         <h1 className="hero-title">Navigating the digital landscape for success</h1>
         <p className="hero-subtitle">
           Our digital marketing agency helps businesses grow and succeed online
@@ -20,12 +20,12 @@ const HeroSection = () => (
         </p>
         <a href="#contact" className="hero-button">Book a consultation</a>
       </div>
-      <div className="image-container">
+      <div className="hero-image-container">
         <img src={illustration} alt="Digital Marketing Illustration" />
       </div>
     </section>
 
-    <div className="logotypes-container">
+    <div className="hero-logotypes-container">
       <img src={amazonLogo} alt="Amazon Logo" />
       <img src={dribbbleLogo} alt="Dribbble Logo" />
       <img src={hubspotLogo} alt="HubSpot Logo" />

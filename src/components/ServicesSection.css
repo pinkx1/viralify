@@ -1,78 +1,210 @@
-.card-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 260px;
-	background-color: var(--bg-color, #f3f3f3);
-	border: 1px solid #191a23;
-	box-shadow: 0px 5px 0px #191a23;
-	border-radius: 45px;
-	box-sizing: border-box;
-  }
-  
-  .card-content-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 50px;
-	width: 100%;
-	height: 100%;
-	box-sizing: border-box;
-  }
-  
-  .content-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
-  }
-  
-  .label-container {
-	display: flex;
-	flex-direction: column;
-	gap: 0;
-  }
-  
-  .label-line {
-	background-color: var(--label-bg-color, #b9ff66);
-	padding: 5px 10px;
-	border-radius: 7px;
-	font-family: "Space Grotesk", sans-serif;
-	font-size: 20px;
-	font-weight: 500;
-	color: #000;
-  }
-  
-  .learn-more {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	color: var(--text-color, #000);
-	font-family: "Space Grotesk", sans-serif;
-	font-size: 18px;
-	text-decoration: none;
-  }
-  
-  .image-wrapper {
-	width: 200px;
-	height: auto;
-  }
-  
-  .icon-wrapper {
-	width: 41px;
-	height: 41px;
-  }
-  
-  .card-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 40px;
-  }
-  
-  @media (max-width: 768px) {
-	.card-grid {
-	  grid-template-columns: 1fr;
-	}
-  }
-  
+/* Контейнер для всех карточек */
+.services-section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; 
+    box-sizing: border-box;
+}
+
+/* Карточка */
+.services-section-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Карточка занимает всю ширину своей колонки */
+    height: 260px; /* Фиксированная высота карточки */
+    border: 1px solid #191A23;
+    box-shadow: 0px 5px 0px #191A23;
+    border-radius: 45px; /* Скруглённые углы */
+    background-color: #F3F3F3; /* Фон по умолчанию */
+    box-sizing: border-box;
+}
+
+/* Контент карточки */
+.services-section-card-content {
+    display: flex;
+    justify-content: space-between; /* Контент внутри равномерно распределён */
+    align-items: center;
+    padding: 50px; /* Внутренние отступы */
+    width: 100%; /* Используем всю ширину карточки */
+    height: 100%; /* Высота карточки */
+    box-sizing: border-box;
+}
+
+/* Лейблы текста */
+.services-section-label-line {
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #B9FF66; /* Цвет фона метки */
+    color: #000; /* Цвет текста */
+    border-radius: 7px; /* Скруглённые углы */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+/* Ссылка Learn More */
+.services-section-learn-more {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между иконкой и текстом */
+    font-size: 18px;
+    color: #000; /* Цвет ссылки */
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Иконка в ссылке */
+.services-section-icon {
+    width: 41px;
+    height: 41px;
+}
+
+/* Изображение в карточке */
+.services-section-image {
+    width: 200px; /* Фиксированная ширина изображения */
+    height: auto; /* Сохраняем пропорции */
+}
+
+/* --- Основной стиль для больших экранов (ПК) --- */
+
+/* Контейнер для всех карточек */
+.services-section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Две карточки в строку */
+    gap: 40px; /* Расстояние между карточками */
+    width: 100%; /* Используем всю ширину родительского контейнера */
+    box-sizing: border-box;
+}
+
+/* Карточка */
+.services-section-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Карточка занимает всю ширину своей колонки */
+    height: 260px; /* Фиксированная высота карточки */
+    border: 1px solid #191A23;
+    box-shadow: 0px 5px 0px #191A23;
+    border-radius: 45px; /* Скруглённые углы */
+    background-color: #F3F3F3; /* Фон по умолчанию */
+    box-sizing: border-box;
+}
+
+/* Контент карточки */
+.services-section-card-content {
+    display: flex;
+    justify-content: space-between; /* Контент внутри равномерно распределён */
+    align-items: center;
+    padding: 50px; /* Внутренние отступы */
+    width: 100%; /* Используем всю ширину карточки */
+    height: 100%; /* Высота карточки */
+    box-sizing: border-box;
+}
+
+/* Лейблы текста */
+.services-section-label-line {
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #B9FF66; /* Цвет фона метки */
+    color: #000; /* Цвет текста */
+    border-radius: 7px; /* Скруглённые углы */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+/* Ссылка Learn More */
+.services-section-learn-more {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между иконкой и текстом */
+    font-size: 18px;
+    color: #000; /* Цвет ссылки */
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Иконка в ссылке */
+.services-section-icon {
+    width: 41px;
+    height: 41px;
+}
+
+/* Изображение в карточке */
+.services-section-image {
+    width: 200px; /* Фиксированная ширина изображения */
+    height: auto; /* Сохраняем пропорции */
+}
+
+/* --- Адаптивные стили --- */
+
+/* ПК с меньшим экраном (максимальная ширина 1200px) */
+@media (max-width: 1200px) {
+    .services-section-grid {
+        grid-template-columns: repeat(2, 1fr); /* Всё ещё 2 карточки, но подстраиваемся */
+        gap: 30px; /* Уменьшаем расстояние между карточками */
+    }
+
+    .services-section-card-content {
+        padding: 40px; /* Уменьшаем отступы */
+    }
+
+    .services-section-label-line {
+        font-size: 18px; /* Уменьшаем текст */
+    }
+
+    .services-section-learn-more {
+        font-size: 16px;
+    }
+
+    .services-section-image {
+        width: 180px; /* Уменьшаем размер изображений */
+    }
+}
+
+/* Планшеты (максимальная ширина 1024px) */
+@media (max-width: 1024px) {
+    .services-section-grid {
+        grid-template-columns: 1fr; /* Одна карточка в строке */
+        gap: 20px; /* Уменьшаем расстояние между карточками */
+    }
+
+    .services-section-card-content {
+        padding: 30px; /* Уменьшаем отступы */
+    }
+
+    .services-section-label-line {
+        font-size: 16px; /* Уменьшаем текст */
+    }
+
+    .services-section-learn-more {
+        font-size: 14px;
+    }
+
+    .services-section-image {
+        width: 160px; /* Ещё меньше изображений */
+    }
+}
+
+/* Мобильные устройства (максимальная ширина 768px) */
+@media (max-width: 768px) {
+    .services-section-grid {
+        grid-template-columns: 1fr; /* Всё ещё одна карточка в строке */
+        gap: 15px; /* Минимальные отступы между карточками */
+    }
+
+    .services-section-card-content {
+        padding: 20px; /* Минимальные отступы */
+    }
+
+    .services-section-label-line {
+        font-size: 14px; /* Минимальный текст */
+    }
+
+    .services-section-learn-more {
+        font-size: 12px; /* Уменьшаем размер текста ссылки */
+    }
+
+    .services-section-image {
+        width: 140px; /* Минимальный размер изображений */
+    }
+}

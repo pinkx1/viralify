@@ -1,11 +1,18 @@
-.accordion-container {
+html {
+	overflow-y: scroll; /* Added to ensure consistent scrollbar space */
+  }
+  
+  /* Общий контейнер аккордеона */
+  .accordion-container {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	width: 100%;
+	overflow-x: hidden; /* Added to hide horizontal overflow */
   }
   
-  .accordion-card {
+  /* Карточка аккордеона */
+  .accordion-card-viralify {
 	background-color: #f3f3f3;
 	border: 1px solid #191a23;
 	box-shadow: 0px 5px 0px #191a23;
@@ -13,21 +20,21 @@
 	padding: 41px 60px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+	box-sizing: border-box; /* Added to include padding within the width */
   }
   
-  .accordion-card.open {
+  .accordion-card-open {
 	background-color: #b9ff66;
   }
   
-  .card-header {
+  /* Заголовок карточки */
+  .accordion-card-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
   }
   
-  .card-number {
-	width: 65px;
-	height: 77px;
+  .accordion-card-number {
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 500;
 	font-size: 60px;
@@ -35,9 +42,7 @@
 	color: #000000;
   }
   
-  .card-title {
-	width: 612px;
-	height: 38px;
+  .accordion-card-title {
 	font-family: "Space Grotesk", sans-serif;
 	font-weight: 500;
 	font-size: 30px;
@@ -46,22 +51,97 @@
 	margin-left: 25px;
   }
   
-  .icon-wrapper {
+  /* Иконка плюса/минуса */
+  .accordion-icon-wrapper {
 	width: 20px;
 	height: 20px;
-	object-fit: contain;
 	background-color: transparent;
   }
   
-  .divider {
+  /* Разделитель */
+  .accordion-divider {
 	height: 1px;
 	background-color: #000;
 	margin: 30px 0;
   }
   
-  .card-content {
+  /* Контент карточки */
+  .accordion-card-content {
 	font-family: "Space Grotesk", sans-serif;
 	font-size: 16px;
 	color: #000;
   }
   
+  /* Адаптивные стили */
+  @media (max-width: 1440px) {
+	.accordion-card-title {
+	  font-size: 26px;
+	  line-height: 34px;
+	}
+  
+	.accordion-card-number {
+	  font-size: 50px;
+	  line-height: 65px;
+	}
+  }
+  
+  @media (max-width: 1024px) {
+	.accordion-container {
+	  gap: 16px;
+	}
+  
+	.accordion-card-viralify {
+	  padding: 35px 50px;
+	}
+  
+	.accordion-card-title {
+	  font-size: 24px;
+	  line-height: 32px;
+	}
+  
+	.accordion-card-number {
+	  font-size: 40px;
+	  line-height: 55px;
+	}
+  
+	.accordion-icon-wrapper {
+	  width: 16px;
+	  height: 16px;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.accordion-card-viralify {
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 30px 30px;
+	}
+  
+	.accordion-card-title {
+	  font-size: 20px;
+	  line-height: 28px;
+	  margin-left: 0;
+	}
+  
+	.accordion-card-number {
+	  font-size: 30px;
+	  line-height: 40px;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.accordion-card-viralify {
+	  width: 100%;
+	  padding: 20px 15px;
+	}
+  
+	.accordion-card-title {
+	  font-size: 18px;
+	  line-height: 24px;
+	}
+  
+	.accordion-card-number {
+	  font-size: 24px;
+	  line-height: 32px;
+	}
+  }

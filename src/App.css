@@ -1,3 +1,9 @@
+html {
+  overflow-y: scroll; /* Ensure consistent scrollbar space */
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -6,6 +12,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+
+/* ... rest of your App.css styles ... */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

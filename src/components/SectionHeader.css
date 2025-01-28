@@ -1,3 +1,4 @@
+/* --- Основной стиль для ПК --- */
 .section-header-container {
     display: flex;
     align-items: center;
@@ -24,4 +25,49 @@
     color: #000000;
     margin: 0;
     max-width: 600px;
+}
+
+/* --- Адаптация для планшетов (максимальная ширина 1024px) --- */
+@media (max-width: 1024px) {
+    .section-header-container {
+        flex-direction: column; /* Переход на вертикальную структуру */
+        align-items: flex-start; /* Выравнивание по левому краю */
+        text-align: left; /* Сохраняем выравнивание текста */
+        gap: 15px; /* Уменьшаем расстояние между заголовком и описанием */
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+
+    .section-header-title {
+        font-size: 32px; /* Немного уменьшаем размер заголовка */
+        text-align: left;
+    }
+
+    .section-header-description {
+        font-size: 16px; /* Уменьшаем размер текста описания */
+        max-width: 100%; /* Описание занимает всю ширину */
+    }
+}
+
+/* --- Адаптация для мобильных устройств (максимальная ширина 768px) --- */
+@media (max-width: 768px) {
+    .section-header-container {
+        flex-direction: column; /* Заголовок и описание идут друг под другом */
+        align-items: center; /* Центрируем содержимое */
+        text-align: center; /* Центрируем текст */
+        gap: 10px; /* Минимальное расстояние между элементами */
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    .section-header-title {
+        font-size: 28px; /* Уменьшаем размер заголовка */
+        text-align: center; /* Центрируем заголовок */
+        padding: 5px 8px; /* Уменьшаем отступы внутри заголовка */
+    }
+
+    .section-header-description {
+        font-size: 14px; /* Уменьшаем размер текста описания */
+        max-width: 90%; /* Описание занимает до 90% ширины экрана */
+    }
 }

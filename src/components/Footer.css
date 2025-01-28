@@ -1,205 +1,175 @@
-.footer-container {
+/* Основной стиль футера */
+.footer-viralify {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	padding: 55px 60px 50px;
-	gap: 30px;
 	background: #191a23;
-	border-radius: 45px 45px 0px 0px;
-	max-width: 1440px;
-	margin: 0 auto;
+	padding: 50px 20px;
+	color: #ffffff;
+	gap: 30px;
   }
   
-  .navigation-and-contacts {
+  /* Верхний блок футера */
+  .footer-top-viralify {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  
+  .footer-logo-text-viralify {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+  }
+  
+  /* Навигационные ссылки */
+  .footer-nav-viralify {
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+  }
+  
+  .footer-link-viralify {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 18px;
+	text-decoration: none;
+	color: #ffffff;
+  }
+  
+  .footer-link-viralify:hover {
+	text-decoration: underline;
+  }
+  
+  /* Средний блок футера */
+  .footer-middle-viralify {
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+	flex-wrap: wrap;
+  }
+  
+  .footer-contact-viralify {
+	flex: 1;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 16px;
+  }
+  
+  .footer-subscription-viralify {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	gap: 66px;
-  }
-  
-  .nav-and-socials {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-  }
-  
-  .logo {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 	gap: 10px;
   }
   
-  .logo span {
-	font-family: "Space Grotesk";
-	font-style: normal;
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 28px;
-	color: #ffffff;
-  }
-  
-  .nav-links {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	gap: 40px;
-  }
-  
-  .nav-links a {
-	font-family: "Space Grotesk";
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 23px;
-	text-decoration: underline;
-	color: #ffffff;
-	cursor: pointer;
-  }
-  
-  .nav-links a:hover {
-	text-decoration: none;
-  }
-  
-  .social-icons {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	gap: 20px;
-  }
-  
-  .social-icons div {
-	width: 30px;
-	height: 30px;
-	background: #ffffff;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  .social-icons img {
-	width: 30px;
-	height: 30px;
-  }
-  
-  .contacts-and-subscription {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	gap: 154px;
-  }
-  
-  .contacts {
-	display: flex;
-	flex-direction: column;
-	gap: 0;
-  }
-  
-  .contacts p {
-	font-family: "Space Grotesk";
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 23px;
-	color: #ffffff;
-	margin: 10px 0;
-  }
-  
-  .contacts h4 {
-	font-family: "Space Grotesk";
-	font-style: normal;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 26px;
-	color: #000000;
-	background: #b9ff66;
-	padding: 5px 10px;
-	border-radius: 7px;
-	width: fit-content;
-	margin: 0 0 20px 0;
-  }
-  
-  .subscription-block {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 58px 40px;
-	gap: 20px;
-	background: #292a32;
+  .footer-input-viralify {
+	padding: 15px;
 	border-radius: 14px;
-  }
-  
-  .subscription-block input {
-	width: 285px;
-	height: 67px;
-	padding: 0 15px;
 	border: 1px solid #ffffff;
+	background: transparent;
+	color: #ffffff;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 16px;
+  }
+  
+  .footer-button-viralify {
+	padding: 15px;
 	border-radius: 14px;
-	background: none;
-	font-family: "Space Grotesk";
-	font-size: 18px;
-	color: #ffffff;
-  }
-  
-  .subscription-block input::placeholder {
-	color: #ffffff;
-  }
-  
-  .subscription-block button {
-	width: 249px;
-	height: 68px;
 	background: #b9ff66;
 	border: none;
-	border-radius: 14px;
-	font-family: "Space Grotesk";
-	font-size: 20px;
-	line-height: 28px;
-	text-align: center;
-	color: #000000;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 16px;
 	cursor: pointer;
   }
   
-  .subscription-block button:hover {
+  .footer-button-viralify:hover {
 	background: #a3e65a;
   }
   
-  .footer-bottom {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	width: 100%;
-  }
-  
-  .footer-bottom hr {
-	border: 1px solid #ffffff;
-	width: 100%;
-  }
-  
-  .footer-bottom div {
+  /* Нижний блок футера */
+  .footer-bottom-viralify {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
   }
   
-  .footer-bottom p,
-  .footer-bottom a {
-	font-family: "Space Grotesk";
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 28px;
+  .footer-social-viralify img {
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
+  }
+  
+  .footer-legal-viralify {
+	font-family: "Space Grotesk", sans-serif;
+	text-align: center;
+	font-size: 14px;
+  }
+  
+  .footer-policy-link-viralify {
+	text-decoration: underline;
 	color: #ffffff;
   }
   
-  .footer-bottom a {
-	text-decoration: underline;
-	cursor: pointer;
+  .footer-policy-link-viralify:hover {
+	text-decoration: none;
   }
   
-  .footer-bottom a:hover {
-	text-decoration: none;
+  /* Адаптивные стили */
+  @media (max-width: 1024px) {
+	.footer-middle-viralify {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+  }
+  
+  @media (max-width: 768px) {
+	.footer-top-viralify {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.footer-nav-viralify {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.footer-middle-viralify {
+	  flex-direction: column;
+	  align-items: center;
+	  gap: 20px;
+	}
+  
+	.footer-bottom-viralify {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.footer-input-viralify,
+	.footer-button-viralify {
+	  width: 100%;
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.footer-viralify {
+	  padding: 20px 15px;
+	}
+  
+	.footer-logo-text-viralify {
+	  font-size: 18px;
+	}
+  
+	.footer-link-viralify {
+	  font-size: 16px;
+	}
+  
+	.footer-contact-viralify p {
+	  text-align: center;
+	}
+  
+	.footer-social-viralify img {
+	  width: 24px;
+	  height: 24px;
+	}
   }
   

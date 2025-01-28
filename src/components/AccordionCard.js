@@ -5,24 +5,26 @@ import minusIcon from "../assets/images/minus.png";
 
 const AccordionCard = ({ number, title, content, isOpen, onClick }) => (
   <div
-    className={`accordion-card ${isOpen ? "open" : ""}`}
+    className={`accordion-card accordion-card-viralify ${
+      isOpen ? "accordion-card-open" : ""
+    }`}
     onClick={onClick}
   >
-    <div className="card-header">
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <div className="card-number">{number}</div>
-        <div className="card-title">{title}</div>
+    <div className="accordion-card-header">
+      <div className="accordion-card-text-wrapper">
+        <div className="accordion-card-number">{number}</div>
+        <div className="accordion-card-title">{title}</div>
       </div>
       <img
-        className="icon-wrapper"
+        className="accordion-icon-wrapper"
         src={isOpen ? minusIcon : plusIcon}
         alt="Toggle icon"
       />
     </div>
     {isOpen && (
       <>
-        <div className="divider" />
-        <div className="card-content">{content}</div>
+        <div className="accordion-divider" />
+        <div className="accordion-card-content">{content}</div>
       </>
     )}
   </div>
@@ -40,7 +42,7 @@ const Accordion = () => {
       number: "01",
       title: "Consultation",
       content:
-        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.",
+        "During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts.",
     },
     {
       number: "02",
