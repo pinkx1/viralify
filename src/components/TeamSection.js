@@ -1,155 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
-import profile1 from '../assets/images/profile1.png';
-import linkedinIcon from '../assets/images/linkedin.png';
-
-const TeamSection = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    padding-bottom: 50px;
-    position: relative;
-`;
-
-const TeamGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    width: 100%;
-    max-width: 1240px;
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-    }
-`;
-
-const Card = styled.div`
-    background: #FFFFFF;
-    border: 1px solid #191A23;
-    box-shadow: 0px 5px 0px #191A23;
-    border-radius: 45px;
-    padding: 40px 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-const PersonDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-`;
-
-const PersonCardDiv = styled.div`
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-    gap: 20px; /* Отступ между фото и блоком с именем и должностью */
-`;
-
-const ProfileImageWrapper = styled.div`
-    width: 80px;
-    height: 80px;
-    background-color: #b9ff66;
-    border-radius: 50%;
-    overflow: hidden;
-`;
-
-const ProfileImage = styled.img`
-    width: 100%;
-    height: auto;
-`;
-
-const LinkedInLink = styled.a`
-    position: absolute;
-    top: 0;
-    right: 0;
-`;
-
-const LinkedInIcon = styled.img`
-    width: 20px;
-    height: 20px;
-`;
-
-const NamePositionDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-`;
-
-const Name = styled.h3`
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-    margin: 0;
-`;
-
-const Position = styled.p`
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-`;
-
-const Divider = styled.div`
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-    margin: 28px 0;
-`;
-
-const PersonExpCardDiv = styled.div`
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
-    color: #000;
-    text-align: left;
-`;
-
-const ButtonContainer = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    max-width: 1240px;
-    margin-top: 20px;
-`;
-
-const SeeAllButton = styled.button`
-    padding: 15px 30px;
-    background-color: #191A23;
-    color: #FFFFFF;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    border-radius: 14px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #333333;
-    }
-`;
+import React from "react";
+import "./TeamSection.css";
+import profile1 from "../assets/images/profile1.png";
+import linkedinIcon from "../assets/images/linkedin.png";
 
 const TeamCard = ({ image, name, position, description, linkedinUrl }) => (
-    <Card>
-        <PersonDiv>
-            <PersonCardDiv>
-                <ProfileImageWrapper>
-                    <ProfileImage src={image} alt={`${name}'s profile`} />
-                </ProfileImageWrapper>
-                <LinkedInLink href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-                    <LinkedInIcon src={linkedinIcon} alt="LinkedIn icon" />
-                </LinkedInLink>
-                <NamePositionDiv>
-                    <Name>{name}</Name>
-                    <Position>{position}</Position>
-                </NamePositionDiv>
-            </PersonCardDiv>
-            <Divider />
-            <PersonExpCardDiv>{description}</PersonExpCardDiv>
-        </PersonDiv>
-    </Card>
+  <div className="team-card">
+    <div className="person-div">
+      <div className="person-card-div">
+        <div className="profile-image-wrapper">
+          <img className="profile-image" src={image} alt={`${name}'s profile`} />
+        </div>
+        <a
+          className="linkedin-link"
+          href={linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="linkedin-icon" src={linkedinIcon} alt="LinkedIn icon" />
+        </a>
+        <div className="name-position-div">
+          <h3 className="name">{name}</h3>
+          <p className="position">{position}</p>
+        </div>
+      </div>
+      <div className="divider"></div>
+      <div className="person-exp-card-div">{description}</div>
+    </div>
+  </div>
 );
 
 const TeamSectionComponent = () => {
@@ -199,24 +76,24 @@ const TeamSectionComponent = () => {
     ];
 
     return (
-        <TeamSection>
-            <TeamGrid>
-                {teamData.map((member, index) => (
-                    <TeamCard
-                        key={index}
-                        image={member.image}
-                        name={member.name}
-                        position={member.position}
-                        description={member.description}
-                        linkedinUrl={member.linkedinUrl}
-                    />
-                ))}
-            </TeamGrid>
-            <ButtonContainer>
-                <SeeAllButton>See all team</SeeAllButton>
-            </ButtonContainer>
-        </TeamSection>
-    );
-};
-
-export default TeamSectionComponent;
+        <section className="team-section">
+          <div className="team-grid">
+            {teamData.map((member, index) => (
+              <TeamCard
+                key={index}
+                image={member.image}
+                name={member.name}
+                position={member.position}
+                description={member.description}
+                linkedinUrl={member.linkedinUrl}
+              />
+            ))}
+          </div>
+          <div className="button-container">
+            <button className="see-all-button">See all team</button>
+          </div>
+        </section>
+      );
+    };
+    
+    export default TeamSectionComponent;

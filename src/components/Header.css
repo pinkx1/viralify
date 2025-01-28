@@ -1,0 +1,99 @@
+.header-wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: #fff;
+	margin-top: 20px;
+  }
+  
+  .header-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 68px;
+  }
+  
+  .logo-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+  }
+  
+  .logo-icon {
+	width: 20px;
+	height: 20px;
+	background-color: #000;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  .logo-text {
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #000;
+  }
+  
+  .nav-and-button-container {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+  }
+  
+  .nav-links-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+	.nav-links-container {
+	  gap: 15px;
+	}
+  }
+  
+  .nav-link {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+  }
+  
+  .nav-link:hover {
+	text-decoration: underline;
+  }
+  
+  .quote-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 16px;
+	width: 160px;
+	height: 48px;
+	border: 1px solid #191a23;
+	border-radius: 14px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+  }
+  
+  .quote-button:hover {
+	background-color: #191a23;
+	color: #ffffff;
+  }
+  
+  @media (max-width: 768px) {
+	.quote-button {
+	  width: 130px;
+	  padding: 6px 12px;
+	  font-size: 12px;
+	}
+  }
+  

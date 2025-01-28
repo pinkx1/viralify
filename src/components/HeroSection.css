@@ -1,0 +1,94 @@
+.hero-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 50px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 70px auto 0 auto;
+  }
+  
+  .text-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 35px;
+	width: 531px;
+  }
+  
+  .hero-title {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+	font-size: 60px;
+	line-height: 77px;
+	color: #000000;
+	margin: 0;
+	width: 531px;
+  }
+  
+  .hero-subtitle {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #000000;
+	margin: 0;
+	width: 498px;
+  }
+  
+  .hero-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 35px;
+	width: 264px;
+	height: 68px;
+	background: #191a23;
+	border-radius: 14px;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .hero-button:hover {
+	background-color: #333333;
+	transform: scale(1.05);
+  }
+  
+  .image-container {
+	max-width: 600px;
+	width: 100%;
+	overflow: hidden;
+  }
+  
+  .image-container img {
+	width: 100%;
+	height: auto;
+  }
+  
+  .logotypes-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 50px auto 70px auto;
+	gap: 20px;
+	max-width: 1200px;
+  }
+  
+  .logotypes-container img {
+	max-height: 48px;
+	width: auto;
+	filter: grayscale(100%);
+	transition: filter 0.3s ease;
+  }
+  
+  .logotypes-container img:hover {
+	filter: grayscale(0);
+  }
+  

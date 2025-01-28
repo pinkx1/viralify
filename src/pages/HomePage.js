@@ -45,8 +45,8 @@ const HomePage = () => (
             description="Connect with Us: Let's Discuss Your Digital Marketing Needs"
         />
         <ContactForm />
-        <Spacer height="140px" />
-    </div>
+        <Spacer height="large" />
+        </div>
 );
 
 export default HomePage;

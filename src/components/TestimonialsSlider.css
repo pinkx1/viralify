@@ -1,0 +1,93 @@
+.slider-container {
+	background-color: #191a23;
+	color: #ffffff;
+	padding: 2rem 0;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  .slider-wrapper {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+	flex: 0 0 100%;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .testimonial-card {
+	border: 1px solid #b9ff66;
+	padding: 2rem;
+	border-radius: 10px;
+	max-width: 600px;
+	background-color: #191a23;
+	text-align: center;
+  }
+  
+  .testimonial-name {
+	color: #b9ff66;
+	font-weight: bold;
+	margin: 1rem 0 0.5rem;
+  }
+  
+  .testimonial-position {
+	color: #ffffff;
+  }
+  
+  .navigation-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	color: #ffffff;
+	font-size: 2rem;
+	cursor: pointer;
+  }
+  
+  .navigation-button:hover {
+	color: #b9ff66;
+  }
+  
+  .navigation-button:disabled {
+	color: #555;
+	cursor: not-allowed;
+  }
+  
+  .prev-button {
+	left: 1rem;
+  }
+  
+  .next-button {
+	right: 1rem;
+  }
+  
+  .indicators {
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+	gap: 0.5rem;
+  }
+  
+  .indicator {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
+  }
+  
+  .indicator:hover {
+	background-color: #b9ff66;
+  }
+  
+  .indicator.active {
+	background-color: #b9ff66;
+  }
+  

@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import React from "react";
+import "./Spacer.css";
 
-const Spacer = styled.div`
-  height: ${(props) => props.height || "20px"};
-  width: 100%; 
-`;
+const Spacer = ({ height = "small" }) => {
+  const heightClass = `spacer-${height}`;
+  return <div className={`spacer ${heightClass}`} />;
+};
 
 export default Spacer;
