@@ -8,13 +8,15 @@ import Container from './components/Container';
 
 const App = () => (
     <Router>
-      <Header />
+      
         <Container>
+        <Header />
               <Routes>
                 <Route path="/" element={<HomePage />} />
               </Routes>
+              <Footer />
         </Container>
-        <Footer />
+        
     </Router>
 );
 

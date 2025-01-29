@@ -10,24 +10,29 @@ const Header = () => {
   };
 
   return (
-    <header className="header-wrapper">
-      <div className="header-container">
-        <div className="logo-container">
-          <div className="logo-icon" />
-          <div className="logo-text">Viralify</div>
+    <header className="navbar">
+      <div className="navbar__container">
+        {/* Логотип */}
+        <div className="navbar__logo-container">
+          <div className="navbar__logo-icon" />
+          <div className="navbar__logo-text">Viralify</div>
         </div>
-        <div className="hamburger-menu" onClick={toggleMenu}>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
+
+        {/* Бургер-меню */}
+        <div className="navbar__hamburger" onClick={toggleMenu}>
+          <span className="navbar__hamburger-line"></span>
+          <span className="navbar__hamburger-line"></span>
+          <span className="navbar__hamburger-line"></span>
         </div>
-        <nav className={`nav-links-container ${menuOpen ? "open" : ""}`}>
-          <Link className="nav-link" to="/about">About us</Link>
-          <Link className="nav-link" to="/services">Services</Link>
-          <Link className="nav-link" to="/use-cases">Use Cases</Link>
-          <Link className="nav-link" to="/pricing">Pricing</Link>
-          <Link className="nav-link" to="/blog">Blog</Link>
-          <Link className="quote-button" to="/quote">Request a quote</Link>
+
+        {/* Меню */}
+        <nav className={`navbar__menu ${menuOpen ? "open" : ""}`}>
+          <Link className="navbar__menu-item" to="/about">About us</Link>
+          <Link className="navbar__menu-item" to="/services">Services</Link>
+          <Link className="navbar__menu-item" to="/use-cases">Use Cases</Link>
+          <Link className="navbar__menu-item" to="/pricing">Pricing</Link>
+          <Link className="navbar__menu-item" to="/blog">Blog</Link>
+          <Link className="navbar__button" to="/quote">Request a quote</Link>
         </nav>
       </div>
     </header>

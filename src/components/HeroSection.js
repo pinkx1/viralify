@@ -10,22 +10,22 @@ import zoomLogo from "../assets/images/zoom-logo.png";
 
 const HeroSection = () => (
   <>
-    <section className="hero-section">
-      <div className="hero-text-container">
-        <h1 className="hero-title">Navigating the digital landscape for success</h1>
-        <p className="hero-subtitle">
-          Our digital marketing agency helps businesses grow and succeed online
-          through a range of services including SEO, PPC, social media
-          marketing, and content creation.
-        </p>
-        <a href="#contact" className="hero-button">Book a consultation</a>
-      </div>
-      <div className="hero-image-container">
-        <img src={illustration} alt="Digital Marketing Illustration" />
+    <section className="hero">
+      <div className="hero__container">
+        <div className="hero__content">
+          <h1 className="hero__title">Navigating the digital landscape for success</h1>
+          <p className="hero__description">
+            Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.
+          </p>
+          <a href="#contact" className="hero__button">Book a consultation</a>
+        </div>
+        <div className="hero__illustration">
+          <img src={illustration} alt="Digital Marketing Illustration" />
+        </div>
       </div>
     </section>
 
-    <div className="hero-logotypes-container">
+    <div className="hero__logos">
       <img src={amazonLogo} alt="Amazon Logo" />
       <img src={dribbbleLogo} alt="Dribbble Logo" />
       <img src={hubspotLogo} alt="HubSpot Logo" />
